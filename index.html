@@ -29,11 +29,10 @@
       font-size: 18px;
       max-width: 700px;
       margin: auto;
-      opacity: 0.9;
     }
 
     .research-badge {
-      margin-top: 25px;
+      margin-top: 20px;
       font-size: 14px;
       opacity: 0.8;
     }
@@ -49,10 +48,27 @@
       font-size: 30px;
     }
 
-    .goal-section p {
-      font-size: 18px;
-      max-width: 600px;
+    .framework {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .framework h2 {
+      margin-bottom: 30px;
+    }
+
+    .steps {
+      max-width: 800px;
       margin: auto;
+      text-align: left;
+    }
+
+    .step {
+      margin-bottom: 20px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
     }
 
     .science-section {
@@ -67,11 +83,6 @@
       padding: 12px 20px;
       border-radius: 8px;
       cursor: pointer;
-      font-size: 16px;
-    }
-
-    .science-btn:hover {
-      opacity: 0.9;
     }
 
     .hidden {
@@ -84,12 +95,6 @@
       background: white;
       padding: 25px;
       border-radius: 10px;
-      box-shadow: 0px 5px 20px rgba(0,0,0,0.08);
-    }
-
-    .hidden p {
-      margin-bottom: 15px;
-      line-height: 1.6;
     }
 
   </style>
@@ -97,59 +102,70 @@
 
 <body>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <header>
     <h1>Turn effort into real academic results.</h1>
     <p>A structured system designed to help your child perform better.</p>
-
     <div class="research-badge">
       Backed by neuroscience research on neuroplasticity & cognitive load
     </div>
   </header>
 
-  <!-- OUR GOAL -->
+  <!-- GOAL -->
   <section class="goal-section">
     <h2>Our Goal</h2>
     <p>To increase the efficiency of the Educational System—by redesigning how humans learn.</p>
   </section>
 
-  <!-- SCIENCE SECTION -->
+  <!-- FRAMEWORK -->
+  <section class="framework">
+    <h2>The Reverse Learning Framework</h2>
+
+    <div class="steps">
+
+      <div class="step">
+        <strong>1. Start with Complexity</strong>
+        <p>Instead of beginning with basics, students engage with full systems early to build context and understanding.</p>
+      </div>
+
+      <div class="step">
+        <strong>2. Learn with Purpose</strong>
+        <p>Every concept is learned because it is needed—not memorized without relevance.</p>
+      </div>
+
+      <div class="step">
+        <strong>3. Guided Deep Solutions</strong>
+        <p>Students study complete, detailed solutions to understand not just answers—but thinking processes.</p>
+      </div>
+
+      <div class="step">
+        <strong>4. Adaptive Reinforcement</strong>
+        <p>Variation and repetition are applied strategically to strengthen understanding and retention.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SCIENCE -->
   <section class="science-section">
     <h2>LearnInReverse</h2>
-    <p>Not just a method. A cognitive system.</p>
-
     <button onclick="toggleScience()" class="science-btn">
       Find out more about the science behind Reverse Learning
     </button>
 
     <div id="scienceContent" class="hidden">
-
       <h3>The Science Behind Reverse Learning</h3>
 
-      <p><strong>Neuroplasticity:</strong> The brain reorganizes itself when exposed to challenging learning. Research shows learning can physically change neural connections and improve performance.</p>
-
-      <p><strong>Cognitive Load:</strong> Learning is most effective under the right level of difficulty. Studies show that moderate challenge leads to the strongest brain adaptation and skill development.</p>
-
-      <p><strong>Brain Adaptation:</strong> Intensive learning can increase synaptic connections and even change brain structure within weeks.</p>
-
-      <p><strong>System-Level Learning:</strong> The brain performs better when learning is connected and meaningful—not isolated pieces.</p>
-
-      <p><strong>Core Insight:</strong> The brain improves by adapting to complexity—not by repeating simple tasks.</p>
-
-      <hr>
-
-      <p style="font-size: 13px; opacity: 0.7;">
-        Based on findings from neuroscience and cognitive science research, including studies on neuroplasticity, working memory, and cognitive load theory.
-      </p>
-
+      <p><strong>Neuroplasticity:</strong> The brain reorganizes itself in response to complex learning.</p>
+      <p><strong>Cognitive Load:</strong> Moderate challenge produces the strongest learning outcomes.</p>
+      <p><strong>Brain Adaptation:</strong> Learning changes neural connections over time.</p>
+      <p><strong>Core Insight:</strong> The brain improves by adapting to complexity.</p>
     </div>
   </section>
 
-  <!-- SCRIPT -->
   <script>
     function toggleScience() {
-      const content = document.getElementById("scienceContent");
-      content.classList.toggle("hidden");
+      document.getElementById("scienceContent").classList.toggle("hidden");
     }
   </script>
 
