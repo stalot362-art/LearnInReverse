@@ -17,7 +17,34 @@
   border-bottom: 1px solid #eee;
   background: #ffffff;
 }
+.science-section {
+  text-align: center;
+  padding: 60px 20px;
+}
 
+.science-btn {
+  background: linear-gradient(135deg, #0a1f44, #1e3a8a);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.science-btn:hover {
+  opacity: 0.9;
+}
+
+.hidden {
+  display: none;
+  margin-top: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+    }
+    
 .logo img {
   height: 40px;
 }
@@ -85,6 +112,12 @@ footer {
 
   </style>
 </head>
+  <script>
+function toggleScience() {
+  const content = document.getElementById("scienceContent");
+  content.classList.toggle("hidden");
+}
+</script>
 <body><header>
   <div class="logo">
     <img src="logo.png" alt="LearnInReverse Logo" style="height:40px; vertical-align:middle;"/>
@@ -119,6 +152,28 @@ footer {
   <div class="card">
     This method transforms information into skill, and skill into intuition.
   </div>
+  <section class="science-section">
+  <h2>LearnInReverse</h2>
+  <p>Not just a method. A new way to train the brain.</p>
+
+  <button onclick="toggleScience()" class="science-btn">
+    Find out more about the science behind Reverse Learning
+  </button>
+
+  <div id="scienceContent" class="hidden">
+    <h3>The Science Behind Reverse Learning</h3>
+
+    <p><strong>Neuroplasticity:</strong> The brain rewires itself when exposed to complex challenges. It becomes more efficient, not bigger.</p>
+
+    <p><strong>Complexity Training:</strong> Systems like language and real-world problem solving force the brain to adapt faster.</p>
+
+    <p><strong>Cognitive Load:</strong> Learning is strongest when tasks are meaningful and slightly difficult.</p>
+
+    <p><strong>Just-In-Time Learning:</strong> The brain retains information better when learned in context, not in isolation.</p>
+
+    <p><strong>Core Insight:</strong> The brain improves by adapting to complexity—not repeating simplicity.</p>
+  </div>
+  </section>
 </section><footer>
   © 2026 LearnInReverse
 </footer></body>
