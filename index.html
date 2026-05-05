@@ -5,10 +5,13 @@
   <title>LearnInReverse</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: #f5f7fb;
       color: #111;
     }
@@ -17,18 +20,27 @@
       background: linear-gradient(135deg, #0a1f44, #1e3a8a);
       color: white;
       text-align: center;
-      padding: 80px 20px;
+      padding: 100px 20px 80px;
+    }
+
+    .logo {
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
     }
 
     header h1 {
-      font-size: 36px;
+      font-size: 30px;
       margin-bottom: 15px;
+      font-weight: 600;
     }
 
     header p {
       font-size: 18px;
       max-width: 700px;
       margin: auto;
+      opacity: 0.9;
     }
 
     .research-badge {
@@ -45,7 +57,14 @@
     }
 
     .goal-section h2 {
-      font-size: 30px;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .goal-section p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: auto;
     }
 
     .framework {
@@ -55,6 +74,7 @@
 
     .framework h2 {
       margin-bottom: 30px;
+      font-size: 28px;
     }
 
     .steps {
@@ -67,8 +87,8 @@
       margin-bottom: 20px;
       background: white;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      box-shadow: 0px 6px 18px rgba(0,0,0,0.06);
     }
 
     .science-section {
@@ -83,6 +103,11 @@
       padding: 12px 20px;
       border-radius: 8px;
       cursor: pointer;
+      font-size: 15px;
+    }
+
+    .science-btn:hover {
+      opacity: 0.9;
     }
 
     .hidden {
@@ -94,7 +119,13 @@
       text-align: left;
       background: white;
       padding: 25px;
-      border-radius: 10px;
+      border-radius: 12px;
+      box-shadow: 0px 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .hidden p {
+      margin-bottom: 15px;
+      line-height: 1.6;
     }
 
   </style>
@@ -104,8 +135,11 @@
 
   <!-- HERO -->
   <header>
+    <div class="logo">LearnInReverse</div>
+
     <h1>Turn effort into real academic results.</h1>
     <p>A structured system designed to help your child perform better.</p>
+
     <div class="research-badge">
       Backed by neuroscience research on neuroplasticity & cognitive load
     </div>
@@ -125,22 +159,22 @@
 
       <div class="step">
         <strong>1. Start with Complexity</strong>
-        <p>Instead of beginning with basics, students engage with full systems early to build context and understanding.</p>
+        <p>Students begin with full systems instead of isolated basics, building immediate context.</p>
       </div>
 
       <div class="step">
         <strong>2. Learn with Purpose</strong>
-        <p>Every concept is learned because it is needed—not memorized without relevance.</p>
+        <p>Concepts are learned only when needed, making every step relevant and useful.</p>
       </div>
 
       <div class="step">
         <strong>3. Guided Deep Solutions</strong>
-        <p>Students study complete, detailed solutions to understand not just answers—but thinking processes.</p>
+        <p>Students study complete, detailed solutions to understand thinking—not just answers.</p>
       </div>
 
       <div class="step">
         <strong>4. Adaptive Reinforcement</strong>
-        <p>Variation and repetition are applied strategically to strengthen understanding and retention.</p>
+        <p>Strategic variation strengthens understanding and long-term retention.</p>
       </div>
 
     </div>
@@ -149,20 +183,27 @@
   <!-- SCIENCE -->
   <section class="science-section">
     <h2>LearnInReverse</h2>
+
     <button onclick="toggleScience()" class="science-btn">
       Find out more about the science behind Reverse Learning
     </button>
 
     <div id="scienceContent" class="hidden">
+
       <h3>The Science Behind Reverse Learning</h3>
 
-      <p><strong>Neuroplasticity:</strong> The brain reorganizes itself in response to complex learning.</p>
-      <p><strong>Cognitive Load:</strong> Moderate challenge produces the strongest learning outcomes.</p>
+      <p><strong>Neuroplasticity:</strong> The brain reorganizes itself when exposed to complex learning.</p>
+
+      <p><strong>Cognitive Load:</strong> Moderate challenge leads to the strongest learning outcomes.</p>
+
       <p><strong>Brain Adaptation:</strong> Learning changes neural connections over time.</p>
-      <p><strong>Core Insight:</strong> The brain improves by adapting to complexity.</p>
+
+      <p><strong>Core Insight:</strong> The brain improves by adapting to complexity—not repetition alone.</p>
+
     </div>
   </section>
 
+  <!-- SCRIPT -->
   <script>
     function toggleScience() {
       document.getElementById("scienceContent").classList.toggle("hidden");
